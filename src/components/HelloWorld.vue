@@ -19,6 +19,9 @@ export default class HelloWorld extends Vue {
   get valueLabel(): string {
     return this.value
   }
+  onClickElement({ target }: { target: HTMLButtonElement }) {
+    console.log(target.getBoundingClientRect())
+  }
 }
 </script>
 

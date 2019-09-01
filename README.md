@@ -67,3 +67,13 @@ export default class HelloWorld extends Vue {
   }
 }
 ```
+
+## methods
+methodsはクラスのメソッドとして定義
+```typescript
+export default class HelloWorld extends Vue {
+  onClickElement({ target }: { target: HTMLButtonElement }) {
+    console.log(target.getBoundingClientRect())
+  }
+}
+```
