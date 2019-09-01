@@ -34,6 +34,9 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class HelloWorld extends Vue {
+  flag: boolean = false
+  inputText: string | null = null
+  bounds: ClientRect | DOMRect | null = null
   @Prop() private msg!: string;
 }
 </script>
