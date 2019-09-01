@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <p>{{ greet }}</p>
+      <p>{{valueLabel}}</p>
   </div>
 </template>
 
@@ -9,14 +10,15 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class HelloWorld extends Vue {
-@Prop({ type: Boolean, default: false})
-flag!: boolean
+  name: string = 'Taro'
+  value: any = false
 
-@Prop({ type: [String,Number],default :null})
-message!: string | null
-
-@Prop({ type: [String, Number], default: null })
-value!: string | number | null
+  get greet(): string {
+    return `Hello ${this.name}`
+  }
+  get valueLabel(): string {
+    return this.value
+  }
 }
 </script>
 

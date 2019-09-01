@@ -39,7 +39,7 @@ export default class HelloWorld extends Vue {
 }
 ```
 
-##  
+##  Prop
 @Propデコレーターを使用してクラスメンバーとして宣言  
 初期値はdefaultで付与  
 @Propのクラスメンバー宣言をする際には、名称に続けて「！」キーワードが必要
@@ -53,5 +53,17 @@ export default class HelloWorld extends Vue {
   
   @Prop({ type: [String, Number], default: null })
   value!: string | number | null
+}
+```
+
+## computed
+computedはgetを使用
+```typescript
+export default class HelloWorld extends Vue {
+  name: string = 'Taro'
+
+  get greet(): string {
+    return `Hello ${this.name}`
+  }
 }
 ```
